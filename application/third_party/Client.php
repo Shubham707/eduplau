@@ -11,7 +11,7 @@ class Client {
 
 	function getBalance($user_session)
 	{
-		return $this->jsonrpc->getbalance("zelles(" . $user_session . ")", 6);
+		return $this->jsonrpc->getbalance("web_(" . $user_session . ")", 6);
 		//return 21;
 	}
 
@@ -28,13 +28,13 @@ class Client {
 
 	function getTransactionList($user_session)
 	{
-		return $this->jsonrpc->listtransactions("zelles(" . $user_session . ")", 200);
+		return $this->jsonrpc->listtransactions("web_(" . $user_session . ")", 200);
 	}
 
 	function getNewAddress($user_session)
 	{
 	//	echo "indise add";
-		return $this->jsonrpc->getnewaddress("zelles(" . $user_session . ")");
+		return $this->jsonrpc->getnewaddress("web_(" . $user_session . ")");
 		//return "1test";
 	}
 
